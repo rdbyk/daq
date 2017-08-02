@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DAQ_Triggering</title>
+</head>
+<body bgcolor="#FFFFFF">
+<center>DAQ Toolbox Functions</center>
+<p><b>DAQ_Triggering</b> - DAQ_DisableStartTrig, DAQ_CfgDigEdgeStartTrig, DAQ_CfgAnlgEdgeStartTrig, DAQ_DisableRefTrig, DAQ_CfgDigEdgeRefTrig, DAQ_CfgAnlgEdgeRefTrig</p>
+<h3><font color="blue">Calling Sequence</font></h3>
+<dl>
+<dd><tt><p>
+    [ status ] = DAQ_DisableStartTrig ( taskHandle )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CfgDigEdgeStartTrig ( taskHandle, triggerSource, triggerEdge )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CfgAnlgEdgeStartTrig ( taskHandle, triggerSource, triggerSlope, triggerLevel )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_DisableRefTrig ( taskHandle )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CfgDigEdgeRefTrig ( taskHandle, triggerSource, triggerEdge, pretriggerSamples )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CfgAnlgEdgeRefTrig ( taskHandle, triggerSource, triggerSlope, triggerLevel, pretriggerSamples )
+    </p></tt></dd>
+</dl>
+<h3><font color="blue">Parameters</font></h3>
+<ul>
+<li>
+<tt><b>taskHandle</b></tt>
+       : mlist (type "daq")
+       </li>
+<li>
+<tt><b>triggerSource</b></tt>
+       : string
+       </li>
+<li>
+<tt><b>triggerEdge</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>triggerSlope</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>triggerLevel</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>pretriggerSamples</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>status</b></tt>
+       : integer
+       </li>
+</ul>
+<h3><font color="blue">Description</font></h3>
+<dl><dd>
+<b></b><p><b>DAQ_FunctionName</b> provides just an interface to
+     <b>DAQmxBaseFunctionName</b>.
+     </p>
+<p>
+     For more detailed information about the interfaced functions,
+     please refer to <em>NI-DAQmx Base 2.x C Function Reference Help</em>.
+     </p>
+</dd></dl>
+<h3><font color="blue">Examples</font></h3>
+<pre>
+   Your NI-DAQmx Base 2.x installation contains a number of tutorial examples
+   written in C, please refer to them.
+   
+   By default, they are located in
+   
+   /usr/local/natinst/nidaqmxbase/examples (Linux)
+   
+   or
+   
+   C:\Program Files\National Instruments\NI-DAQmx Base\Examples (Windows).
+  </pre>
+<h3><font color="blue">See Also</font></h3>
+<p><a href="DAQ_Constants.htm"><tt><b>DAQ_Constants</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Task_Configuration_and_Control.htm"><tt><b>DAQ_Task_Configuration_and_Control</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Channel_Configuration_and_Creation.htm"><tt><b>DAQ_Channel_Configuration_and_Creation</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Timing.htm"><tt><b>DAQ_Timing</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Read_Functions.htm"><tt><b>DAQ_Read_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Write_Functions.htm"><tt><b>DAQ_Write_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Buffer_Configuration.htm"><tt><b>DAQ_Buffer_Configuration</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Error_Handling.htm"><tt><b>DAQ_Error_Handling</b></tt></a>,&nbsp;&nbsp;</p>
+<h3><font color="blue">Authors</font></h3>
+<dl><dd>
+<b>Dirk Reusch</b><p>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </p>
+</dd></dl>
+<h3><font color="blue">Bibliography</font></h3>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </body>
+</html>

@@ -1,0 +1,20 @@
+Version 0.2.1 -> 0.2.2
+======================
+
+- header file "use_daqmx.h" is now included, thus this
+  toolbox works with NI-DAQmx Base 2.x/3.x OR NI-DAQmx 8.x/9.x
+- use pre-built help pages to circumvent minor but annoying
+  building problems
+- cleanup of builder/loader scripts
+
+Version 0.2 -> 0.2.1
+====================
+
+- tiny fix for compilation with ScicosLab 4.3
+
+Changes Version 0.1 -> 0.2
+==========================
+
+- all functions of NI-DAQmx C API are now interfaced
+. bug in DAQ_CfgInputBuffer fixed 
+- example pulseWidth.sce added

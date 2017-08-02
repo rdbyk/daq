@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE MAN SYSTEM "file:///usr/local/lib/scilab-4.1.2/man/manrev.dtd">
+<MAN>
+  <LANGUAGE>eng</LANGUAGE>
+  <TITLE>DAQ Timing</TITLE>
+  <TYPE>DAQ Toolbox Functions</TYPE>
+  <DATE>20-Dec-2007</DATE>
+  <SHORT_DESCRIPTION name="DAQ_Channel_Configuration_and_Creation">DAQ_CreateAIThermcplChan, DAQ_CreateAIVoltageChan, DAQ_CreateAOVoltageChan, DAQ_CreateDIChan, DAQ_CreateDOChan, DAQ_CreateCIPeriodChan, DAQ_CreateCICountEdgesChan, DAQ_CreateCIPulseWidthChan, DAQ_CreateCOPulseChanFreq</SHORT_DESCRIPTION>
+
+  <CALLING_SEQUENCE>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateAIThermcplChan( taskHandle, physicalChannel, minVal, maxVal, units, thermocoupleType, cjcSource, cjcVal, cjcChannel )
+    </P>
+    </CALLING_SEQUENCE_ITEM> 
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateAIVoltageChan( taskHandle, physicalChannel, terminalConfig, minVal, maxVal )
+    </P>
+    </CALLING_SEQUENCE_ITEM> 
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateAOVoltageChan( taskHandle, physicalChannel, minVal, maxVal )
+    </P>
+    </CALLING_SEQUENCE_ITEM> 
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateDIChan (taskHandle, lines )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateDOChan (taskHandle, lines )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateCIPeriodChan( taskHandle, counter, minVal, maxVal, units, edge )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateCICountEdgesChan( taskHandle, counter, edge, initialCount, countDirection )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateCIPulseWidthChan( taskHandle, counter, minVal, maxVal, units, startingEdge )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_CreateCOPulseChanFreq( taskHandle, counter, idleState, initialDelay, freq, dutyCycle )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+  </CALLING_SEQUENCE>
+
+  <PARAM>
+  <PARAM_INDENT>
+    <PARAM_ITEM>
+    <PARAM_NAME>taskHandle</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : mlist (type "daq")
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>physicalChannel</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>lines</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>counter</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>terminalConfig</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>minVal</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>maxVal</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>units</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>edge</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>    
+    <PARAM_NAME>startingEdge</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>initialCount</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>countDirection</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>idleState</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>initialDelay</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>freq</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>dutyCycle</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>thermocoupleType</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>cjcSource</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>cjcVal</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>cjcChannel</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>status</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+  </PARAM_INDENT>
+  </PARAM>
+ 
+  <DESCRIPTION>
+     <DESCRIPTION_INDENT>
+     <DESCRIPTION_ITEM>
+     <P>
+     <BD>DAQ_FunctionName</BD> provides just an interface to
+     <BD>DAQmxBaseFunctionName</BD>.
+     </P>
+     <P>
+     For more detailed information about the interfaced functions,
+     please refer to <EM>NI-DAQmx Base 2.x C Function Reference Help</EM>.
+     </P>
+     </DESCRIPTION_ITEM>
+     </DESCRIPTION_INDENT>
+  </DESCRIPTION>
+
+  <EXAMPLE><![CDATA[
+   Your NI-DAQmx Base 2.x installation contains a number of tutorial examples
+   written in C, please refer to them.
+   
+   By default, they are located in
+   
+   /usr/local/natinst/nidaqmxbase/examples (Linux)
+   
+   or
+   
+   C:\Program Files\National Instruments\NI-DAQmx Base\Examples (Windows).
+  ]]></EXAMPLE>
+
+  <SEE_ALSO>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Constants</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Task_Configuration_and_Control</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Timing</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Triggering</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Read_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Write_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Buffer_Configuration</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Error_Handling</LINK> </SEE_ALSO_ITEM>
+  </SEE_ALSO>
+
+  <AUTHORS>
+    <AUTHORS_ITEM label='Dirk Reusch'>
+    <P>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </P>
+    </AUTHORS_ITEM>
+  </AUTHORS>
+
+  <BIBLIO>
+    <SP>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </SP>
+  </BIBLIO>
+
+</MAN>

@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DAQ_Read_Functions</title>
+</head>
+<body bgcolor="#FFFFFF">
+<center>DAQ Toolbox Functions</center>
+<p><b>DAQ_Read_Functions</b> - DAQ_ReadAnalogF64, DAQ_ReadBinaryI16, DAQ_ReadBinaryI32, DAQ_ReadDigitalU8, DAQ_ReadDigitalU32, DAQ_ReadDigitalScalarU32, DAQ_ReadCounterF64, DAQ_ReadCounterScalarF64, DAQ_ReadCounterScalarU32, DAQ_ReadCounterU32</p>
+<h3><font color="blue">Calling Sequence</font></h3>
+<dl>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadAnalogF64 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </p></tt></dd>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadBinaryI16 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </p></tt></dd>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadBinaryI32 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </p></tt></dd>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadDigitalU8 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </p></tt></dd>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadDigitalU32 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </p></tt></dd>
+<dd><tt><p>
+    [ value, status ] = DAQ_ReadDigitalScalarU32( taskHandle, timeout )
+    </p></tt></dd>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadCounterF64 ( taskHandle,  numSampsPerChan, timeout, arraySizeInSamps )
+    </p></tt></dd>
+<dd><tt><p>
+    [ value, status ] = DAQ_ReadCounterScalarF64( taskHandle, timeout )
+    </p></tt></dd>
+<dd><tt><p>
+    [ value, status ] = DAQ_ReadCounterScalarU32( taskHandle, timeout )
+    </p></tt></dd>
+<dd><tt><p>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadCounterU32 ( taskHandle,  numSampsPerChan, timeout, arraySizeInSamps )
+    </p></tt></dd>
+</dl>
+<h3><font color="blue">Parameters</font></h3>
+<ul>
+<li>
+<tt><b>taskHandle</b></tt>
+       : mlist (type "daq")
+       </li>
+<li>
+<tt><b>numSampsPerChan</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>timeout</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>fillMode</b></tt>
+       : boolean
+       </li>
+<li>
+<tt><b>arraySizeInSamps</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>sampsPerChanRead</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>readArray</b></tt>
+       : double, int16, int32, uint8 or uint32 row vector
+       </li>
+<li>
+<tt><b>value</b></tt>
+       : double or uint32
+       </li>
+<li>
+<tt><b>status</b></tt>
+       : integer
+       </li>
+</ul>
+<h3><font color="blue">Description</font></h3>
+<dl><dd>
+<b></b><p><b>DAQ_FunctionName</b> provides just an interface to
+     <b>DAQmxBaseFunctionName</b>.
+     </p>
+<p>
+     For more detailed information about the interfaced functions,
+     please refer to <em>NI-DAQmx Base 2.x C Function Reference Help</em>.
+     </p>
+</dd></dl>
+<h3><font color="blue">Examples</font></h3>
+<pre>
+   Your NI-DAQmx Base 2.x installation contains a number of tutorial examples
+   written in C, please refer to them.
+   
+   By default, they are located in
+   
+   /usr/local/natinst/nidaqmxbase/examples (Linux)
+   
+   or
+   
+   C:\Program Files\National Instruments\NI-DAQmx Base\Examples (Windows).
+  </pre>
+<h3><font color="blue">See Also</font></h3>
+<p><a href="DAQ_Constants.htm"><tt><b>DAQ_Constants</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Task_Configuration_and_Control.htm"><tt><b>DAQ_Task_Configuration_and_Control</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Channel_Configuration_and_Creation.htm"><tt><b>DAQ_Channel_Configuration_and_Creation</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Timing.htm"><tt><b>DAQ_Timing</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Triggering.htm"><tt><b>DAQ_Triggering</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Write_Functions.htm"><tt><b>DAQ_Write_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Buffer_Configuration.htm"><tt><b>DAQ_Buffer_Configuration</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Error_Handling.htm"><tt><b>DAQ_Error_Handling</b></tt></a>,&nbsp;&nbsp;</p>
+<h3><font color="blue">Authors</font></h3>
+<dl><dd>
+<b>Dirk Reusch</b><p>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </p>
+</dd></dl>
+<h3><font color="blue">Bibliography</font></h3>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </body>
+</html>

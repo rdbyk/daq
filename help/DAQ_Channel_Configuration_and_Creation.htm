@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DAQ_Channel_Configuration_and_Creation</title>
+</head>
+<body bgcolor="#FFFFFF">
+<center>DAQ Toolbox Functions</center>
+<p><b>DAQ_Channel_Configuration_and_Creation</b> - DAQ_CreateAIThermcplChan, DAQ_CreateAIVoltageChan, DAQ_CreateAOVoltageChan, DAQ_CreateDIChan, DAQ_CreateDOChan, DAQ_CreateCIPeriodChan, DAQ_CreateCICountEdgesChan, DAQ_CreateCIPulseWidthChan, DAQ_CreateCOPulseChanFreq</p>
+<h3><font color="blue">Calling Sequence</font></h3>
+<dl>
+<dd><tt><p>
+    [ status ] = DAQ_CreateAIThermcplChan( taskHandle, physicalChannel, minVal, maxVal, units, thermocoupleType, cjcSource, cjcVal, cjcChannel )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateAIVoltageChan( taskHandle, physicalChannel, terminalConfig, minVal, maxVal )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateAOVoltageChan( taskHandle, physicalChannel, minVal, maxVal )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateDIChan (taskHandle, lines )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateDOChan (taskHandle, lines )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateCIPeriodChan( taskHandle, counter, minVal, maxVal, units, edge )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateCICountEdgesChan( taskHandle, counter, edge, initialCount, countDirection )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateCIPulseWidthChan( taskHandle, counter, minVal, maxVal, units, startingEdge )
+    </p></tt></dd>
+<dd><tt><p>
+    [ status ] = DAQ_CreateCOPulseChanFreq( taskHandle, counter, idleState, initialDelay, freq, dutyCycle )
+    </p></tt></dd>
+</dl>
+<h3><font color="blue">Parameters</font></h3>
+<ul>
+<li>
+<tt><b>taskHandle</b></tt>
+       : mlist (type "daq")
+       </li>
+<li>
+<tt><b>physicalChannel</b></tt>
+       : string
+       </li>
+<li>
+<tt><b>lines</b></tt>
+       : string
+       </li>
+<li>
+<tt><b>counter</b></tt>
+       : string
+       </li>
+<li>
+<tt><b>terminalConfig</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>minVal</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>maxVal</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>units</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>edge</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>startingEdge</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>initialCount</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>countDirection</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>idleState</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>initialDelay</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>freq</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>dutyCycle</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>thermocoupleType</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>cjcSource</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>cjcVal</b></tt>
+       : double
+       </li>
+<li>
+<tt><b>cjcChannel</b></tt>
+       : string
+       </li>
+<li>
+<tt><b>status</b></tt>
+       : integer
+       </li>
+</ul>
+<h3><font color="blue">Description</font></h3>
+<dl><dd>
+<b></b><p><b>DAQ_FunctionName</b> provides just an interface to
+     <b>DAQmxBaseFunctionName</b>.
+     </p>
+<p>
+     For more detailed information about the interfaced functions,
+     please refer to <em>NI-DAQmx Base 2.x C Function Reference Help</em>.
+     </p>
+</dd></dl>
+<h3><font color="blue">Examples</font></h3>
+<pre>
+   Your NI-DAQmx Base 2.x installation contains a number of tutorial examples
+   written in C, please refer to them.
+   
+   By default, they are located in
+   
+   /usr/local/natinst/nidaqmxbase/examples (Linux)
+   
+   or
+   
+   C:\Program Files\National Instruments\NI-DAQmx Base\Examples (Windows).
+  </pre>
+<h3><font color="blue">See Also</font></h3>
+<p><a href="DAQ_Constants.htm"><tt><b>DAQ_Constants</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Task_Configuration_and_Control.htm"><tt><b>DAQ_Task_Configuration_and_Control</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Timing.htm"><tt><b>DAQ_Timing</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Triggering.htm"><tt><b>DAQ_Triggering</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Read_Functions.htm"><tt><b>DAQ_Read_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Write_Functions.htm"><tt><b>DAQ_Write_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Buffer_Configuration.htm"><tt><b>DAQ_Buffer_Configuration</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Error_Handling.htm"><tt><b>DAQ_Error_Handling</b></tt></a>,&nbsp;&nbsp;</p>
+<h3><font color="blue">Authors</font></h3>
+<dl><dd>
+<b>Dirk Reusch</b><p>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </p>
+</dd></dl>
+<h3><font color="blue">Bibliography</font></h3>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </body>
+</html>

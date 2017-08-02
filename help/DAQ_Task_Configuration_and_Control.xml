@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE MAN SYSTEM "file:///usr/local/lib/scilab-4.1.2/man/manrev.dtd">
+<MAN>
+  <LANGUAGE>eng</LANGUAGE>
+  <TITLE>DAQ Task Configuration and Control</TITLE>
+  <TYPE>DAQ Toolbox Functions</TYPE>
+  <DATE>20-Dec-2007</DATE>
+  <SHORT_DESCRIPTION name="DAQ_Task_Configuration_and_Control"> DAQ_CreateTask, DAQ_LoadTask, DAQ_StartTask, DAQ_StopTask, DAQ_ClearTask, DAQ_IsTaskDone, DAQ_ResetDevice</SHORT_DESCRIPTION>
+
+  <CALLING_SEQUENCE>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ taskHandle, status ] = DAQ_CreateTask ( taskName )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ taskHandle, status ] = DAQ_LoadTask ( taskName )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_StartTask ( taskHandle )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_StopTask ( taskHandle )
+    </P>
+    </CALLING_SEQUENCE_ITEM>  
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_ClearTask ( taskHandle )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ isTaskDone, status ] = DAQ_IsTaskDone ( taskHandle )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ status ] = DAQ_ResetDevice ( deviceName )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+  </CALLING_SEQUENCE>
+
+  <PARAM>
+  <PARAM_INDENT>
+
+    <PARAM_ITEM>
+    <PARAM_NAME>taskName</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>taskHandle</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : mlist (type "daq")
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>isTaskDone</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : boolean
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>deviceName</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>status</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+  </PARAM_INDENT>
+  </PARAM>
+ 
+  <DESCRIPTION>
+     <DESCRIPTION_INDENT>
+     <DESCRIPTION_ITEM>
+     <P>
+     <BD>DAQ_FunctionName</BD> provides just an interface to
+     <BD>DAQmxBaseFunctionName</BD>.
+     </P>
+     <P>
+     For more detailed information about the interfaced functions,
+     please refer to <EM>NI-DAQmx Base 2.x C Function Reference Help</EM>.
+     </P>
+     </DESCRIPTION_ITEM>
+     </DESCRIPTION_INDENT>
+  </DESCRIPTION>
+
+  <EXAMPLE><![CDATA[
+   Your NI-DAQmx Base 2.x installation contains a number of tutorial examples
+   written in C, please refer to them.
+   
+   By default, they are located in
+   
+   /usr/local/natinst/nidaqmxbase/examples (Linux)
+   
+   or
+   
+   C:\Program Files\National Instruments\NI-DAQmx Base\Examples (Windows).
+  ]]></EXAMPLE>
+
+  <SEE_ALSO>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Constants</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Channel_Configuration_and_Creation</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Timing</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Triggering</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Read_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Write_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Buffer_Configuration</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Error_Handling</LINK> </SEE_ALSO_ITEM>
+  </SEE_ALSO>
+
+  <AUTHORS>
+    <AUTHORS_ITEM label='Dirk Reusch'>
+    <P>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </P>
+    </AUTHORS_ITEM>
+  </AUTHORS>
+
+  <BIBLIO>
+    <SP>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </SP>
+  </BIBLIO>
+
+</MAN>

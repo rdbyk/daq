@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE MAN SYSTEM "file:///usr/local/lib/scilab-4.1.2/man/manrev.dtd">
+<MAN>
+  <LANGUAGE>eng</LANGUAGE>
+  <TITLE>DAQ Constants</TITLE>
+  <TYPE>DAQ Toolbox Functions</TYPE>
+  <DATE>20-Dec-2007</DATE>
+  <SHORT_DESCRIPTION name="DAQ_Constants">DAQ</SHORT_DESCRIPTION>
+
+  <CALLING_SEQUENCE>
+  <CALLING_SEQUENCE_ITEM>[ value ] = DAQ ( name )</CALLING_SEQUENCE_ITEM> 
+  </CALLING_SEQUENCE>
+
+  <PARAM>
+  <PARAM_INDENT>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>name</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : string
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>value</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+  </PARAM_INDENT>
+  </PARAM>
+ 
+  <DESCRIPTION>
+     <DESCRIPTION_INDENT>
+     <DESCRIPTION_ITEM>
+     <P>
+     <BD>DAQ("NAME")</BD> returns the value of a predefined constant
+     <BD>DAQmx_NAME</BD>.
+     </P>
+     </DESCRIPTION_ITEM>
+     </DESCRIPTION_INDENT>
+  </DESCRIPTION>
+
+  <EXAMPLE><![CDATA[
+   // value of DAQmx_Val_GroupByChannel
+   value = DAQ("Val_GroupByChannel");
+  ]]></EXAMPLE>
+
+  <SEE_ALSO>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Task_Configuration_and_Control</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Channel_Configuration_and_Creation</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Timing</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Triggering</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Read_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Write_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Buffer_Configuration</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Error_Handling</LINK> </SEE_ALSO_ITEM>
+  </SEE_ALSO>
+
+  <AUTHORS>
+    <AUTHORS_ITEM label='Dirk Reusch'>
+    <P>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </P>
+    </AUTHORS_ITEM>
+  </AUTHORS>
+
+  <BIBLIO>
+    <SP>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </SP>
+  </BIBLIO>
+
+</MAN>

@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DAQ_Error_Handling</title>
+</head>
+<body bgcolor="#FFFFFF">
+<center>DAQ Toolbox Functions</center>
+<p><b>DAQ_Error_Handling</b> - DAQ_Success, DAQ_Failed, DAQ_ErrChk, DAQ_GetExtendedErrorInfo</p>
+<h3><font color="blue">Calling Sequence</font></h3>
+<dl>
+<dd><tt><p>
+    [ value ] = DAQ_Success ()
+    </p></tt></dd>
+<dd><tt><p>
+    [ failed ] = DAQ_Failed ( status )
+    </p></tt></dd>
+<dd><tt><p>
+    [] = DAQ_ErrChk ( taskHandle, status )
+    </p></tt></dd>
+<dd><tt><p>
+    [ errorString ] = DAQ_GetExtendedErrorInfo ()
+    </p></tt></dd>
+</dl>
+<h3><font color="blue">Parameters</font></h3>
+<ul>
+<li>
+<tt><b>value</b></tt>
+       : integer
+       </li>
+<li>
+<tt><b>failed</b></tt>
+       : boolean
+       </li>
+<li>
+<tt><b>errorString</b></tt>
+       : string
+       </li>
+</ul>
+<h3><font color="blue">Description</font></h3>
+<dl><dd>
+<b></b><p><b>DAQ_Success</b> returns a constant value (0), which is returned by
+     NI-DAQmx Base functions to indicate successful operation.
+     </p>
+<p><b>DAQ_Failed</b> can be used to check the <b>status</b> of an
+     operation. It returns <b>T</b> if the operation failed and <b>F</b>
+     otherwise.
+     </p>
+<p><b>DAQ_ErrChk</b> checks the <b>status</b> of an operation and in case of a
+     failure the associated task specified by <b>taskHandle</b> is stopped
+     and cleared and an apropriate error message is issued (see implementation
+     of DAQ_ErrChk in Examples section below).
+     </p>
+<p><b>DAQ_GetExtendedErrorInfo</b> provides just an interface to
+     <b>DAQmxBaseGetExtendedErrorInfo</b>.
+     </p>
+<p>
+     For more detailed information about the interfaced functions,
+     please refer to <em>NI-DAQmx Base 2.x C Function Reference Help</em>.
+     </p>
+</dd></dl>
+<h3><font color="blue">Examples</font></h3>
+<pre>
+   // implementation of DAQ_ErrChk
+   function [] = DAQ_ErrChk( taskHandle, status )
+     if DAQ_Failed( status ) then
+       errorString = DAQ_GetExtendedErrorInfo();
+         if taskHandle ~= 0 then
+           DAQ_StopTask( taskHandle );
+           DAQ_ClearTask( taskHandle );
+         end
+      error( 'DAQmxBase Error: ' + string(status) + ': '...
+                                 + errorString, 10000 );
+     end
+   endfunction
+  </pre>
+<h3><font color="blue">See Also</font></h3>
+<p><a href="DAQ_Constants.htm"><tt><b>DAQ_Constants</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Task_Configuration_and_Control.htm"><tt><b>DAQ_Task_Configuration_and_Control</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Channel_Configuration_and_Creation.htm"><tt><b>DAQ_Channel_Configuration_and_Creation</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Timing.htm"><tt><b>DAQ_Timing</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Triggering.htm"><tt><b>DAQ_Triggering</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Read_Functions.htm"><tt><b>DAQ_Read_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Write_Functions.htm"><tt><b>DAQ_Write_Functions</b></tt></a>,&nbsp;&nbsp;<a href="DAQ_Buffer_Configuration.htm"><tt><b>DAQ_Buffer_Configuration</b></tt></a>,&nbsp;&nbsp;</p>
+<h3><font color="blue">Authors</font></h3>
+<dl><dd>
+<b>Dirk Reusch</b><p>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </p>
+</dd></dl>
+<h3><font color="blue">Bibliography</font></h3>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </body>
+</html>

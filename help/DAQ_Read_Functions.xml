@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE MAN SYSTEM "file:///usr/local/lib/scilab-4.1.2/man/manrev.dtd">
+<MAN>
+  <LANGUAGE>eng</LANGUAGE>
+  <TITLE>DAQ Read Functions</TITLE>
+  <TYPE>DAQ Toolbox Functions</TYPE>
+  <DATE>20-Dec-2007</DATE>
+  <SHORT_DESCRIPTION name="DAQ_Read_Functions">DAQ_ReadAnalogF64, DAQ_ReadBinaryI16, DAQ_ReadBinaryI32, DAQ_ReadDigitalU8, DAQ_ReadDigitalU32, DAQ_ReadDigitalScalarU32, DAQ_ReadCounterF64, DAQ_ReadCounterScalarF64, DAQ_ReadCounterScalarU32, DAQ_ReadCounterU32</SHORT_DESCRIPTION>
+
+  <CALLING_SEQUENCE>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadAnalogF64 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadBinaryI16 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM> 
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadBinaryI32 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadDigitalU8 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadDigitalU32 ( taskHandle,  numSampsPerChan, timeout, fillMode, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ value, status ] = DAQ_ReadDigitalScalarU32( taskHandle, timeout )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadCounterF64 ( taskHandle,  numSampsPerChan, timeout, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ value, status ] = DAQ_ReadCounterScalarF64( taskHandle, timeout )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ value, status ] = DAQ_ReadCounterScalarU32( taskHandle, timeout )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+    <CALLING_SEQUENCE_ITEM>
+    <P>
+    [ readArray, sampsPerChanRead, status ] = DAQ_ReadCounterU32 ( taskHandle,  numSampsPerChan, timeout, arraySizeInSamps )
+    </P>
+    </CALLING_SEQUENCE_ITEM>
+  </CALLING_SEQUENCE>
+
+  <PARAM>
+  <PARAM_INDENT>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>taskHandle</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : mlist (type "daq")
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>numSampsPerChan</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>timeout</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>fillMode</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : boolean
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>arraySizeInSamps</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>sampsPerChanRead</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>readArray</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double, int16, int32, uint8 or uint32 row vector
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    
+    <PARAM_ITEM>
+    <PARAM_NAME>value</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : double or uint32
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+    <PARAM_ITEM>
+    
+    <PARAM_NAME>status</PARAM_NAME>
+    <PARAM_DESCRIPTION>
+       <SP>
+       : integer
+       </SP>
+    </PARAM_DESCRIPTION>
+    </PARAM_ITEM>
+  </PARAM_INDENT>
+  </PARAM>
+ 
+  <DESCRIPTION>
+     <DESCRIPTION_INDENT>
+     <DESCRIPTION_ITEM>
+     <P>
+     <BD>DAQ_FunctionName</BD> provides just an interface to
+     <BD>DAQmxBaseFunctionName</BD>.
+     </P>
+     <P>
+     For more detailed information about the interfaced functions,
+     please refer to <EM>NI-DAQmx Base 2.x C Function Reference Help</EM>.
+     </P>
+     </DESCRIPTION_ITEM>
+     </DESCRIPTION_INDENT>
+  </DESCRIPTION>
+
+  <EXAMPLE><![CDATA[
+   Your NI-DAQmx Base 2.x installation contains a number of tutorial examples
+   written in C, please refer to them.
+   
+   By default, they are located in
+   
+   /usr/local/natinst/nidaqmxbase/examples (Linux)
+   
+   or
+   
+   C:\Program Files\National Instruments\NI-DAQmx Base\Examples (Windows).
+  ]]></EXAMPLE>
+
+  <SEE_ALSO>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Constants</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Task_Configuration_and_Control</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Channel_Configuration_and_Creation</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Timing</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Triggering</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Write_Functions</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Buffer_Configuration</LINK> </SEE_ALSO_ITEM>
+    <SEE_ALSO_ITEM> <LINK>DAQ_Error_Handling</LINK> </SEE_ALSO_ITEM>
+  </SEE_ALSO>
+
+  <AUTHORS>
+    <AUTHORS_ITEM label='Dirk Reusch'>
+    <P>
+    Kybernetik Dr. Reusch (http://www.kybdr.de)
+    </P>
+    </AUTHORS_ITEM>
+  </AUTHORS>
+
+  <BIBLIO>
+    <SP>
+    NI-DAQmx Base 2.x C Function Reference Help
+    </SP>
+  </BIBLIO>
+
+</MAN>
+
